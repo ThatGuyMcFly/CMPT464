@@ -1,0 +1,21 @@
+/**
+ * main.c
+ */
+
+#include "timer_module.h"
+#include "uart_module.h"
+#include "driverlib/aon_batmon.h"
+
+void runnableFunction() {
+    uint32_t temperature = AONBatMonTemperatureGetDegC();
+    uart_send_data(temperature);
+}
+
+int main(void)
+{
+    AONBatMonEnable();
+    uart_setup();
+    timer_setup(&runnableFunction, 5000);
+    PRCMSleep();
+	return 0;
+}
