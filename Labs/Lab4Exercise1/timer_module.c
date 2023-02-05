@@ -11,7 +11,7 @@
 #define MS 3000
 #define NULL 0x00000000
 
-void (*callback)(void) = NULL;
+void (*callback)(void *ptr) = NULL;
 int delay = 0;
 
 /**
@@ -24,7 +24,7 @@ void timer_interrupt_fn() {
     TimerIntClear(GPT0_BASE, TIMER_TIMA_TIMEOUT);
 
     if(callback != NULL) {
-        callback();
+        callback(NULL);
     }
 
     // Configure timer to use timer A in one shot mode
@@ -49,7 +49,7 @@ void timer_interrupt_fn() {
  *
  *  passedDelay - an integer that sets the delay time in milliseconds
  */
-void timer_setup(void (*passedInCallbackFunction)(void), int passedDelay) {
+void timer_setup(void (*passedInCallbackFunction)(void *ptr), int passedDelay) {
     delay = passedDelay;
     callback = passedInCallbackFunction;
     // Turn on Peripheral Power domain

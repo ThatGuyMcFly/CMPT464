@@ -1,4 +1,8 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation
+ColorsAndFontsPreferencePage.selectedElement=Corg.eclipse.cdt.ui.ColoredLabels.writeaccess_highlight
 RUN_IN_BACKGROUND=false
 UIActivities.com.ti.ccstudio.activities.RSEActivity=true
 eclipse.preferences.version=1
+org.eclipse.cdt.ui.ColoredLabels.match_highlight=136,138,133
+org.eclipse.cdt.ui.ColoredLabels.writeaccess_highlight=136,138,133

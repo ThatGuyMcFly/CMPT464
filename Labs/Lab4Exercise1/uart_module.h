@@ -13,7 +13,7 @@
 #include "driverlib/uart.h"
 #include "driverlib/ioc.h"
 
-void uart_send_data();
-void uart_setup();
+void uart_send_data(char*);
+void uart_setup(uint32_t);
 
 #endif /* UART_MODULE_H_ */

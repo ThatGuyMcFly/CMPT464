@@ -11,6 +11,8 @@ ORDERED_OBJS += \
 "./ccfg.obj" \
 "./main.obj" \
 "./startup_ccs.obj" \
+"./timer_module.obj" \
+"./uart_module.obj" \
 "../cc13x0f128.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -155,8 +157,8 @@ Lab4Exercise2.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "ccfg.obj" "main.obj" "startup_ccs.obj" 
-	-$(RM) "ccfg.d" "main.d" "startup_ccs.d" 
+	-$(RM) "ccfg.obj" "main.obj" "startup_ccs.obj" "timer_module.obj" "uart_module.obj" 
+	-$(RM) "ccfg.d" "main.d" "startup_ccs.d" "timer_module.d" "uart_module.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

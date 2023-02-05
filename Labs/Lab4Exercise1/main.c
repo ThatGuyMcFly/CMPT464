@@ -1,4 +1,8 @@
 /**
+ * CMPT464 Lab 4 Exercise 1
+ * Martin Knoetze
+ * SN: 3086754
+ *
  * main.c
  */
 
@@ -25,7 +29,7 @@ void convert_to_char(uint32_t data, char * characters) {
 /**
  *
  */
-void timerCallback() {
+void timerCallback(void *ptr) {
     uint32_t temperature = AONBatMonTemperatureGetDegC();
 
     char characters[] = "   C\n\r";

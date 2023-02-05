@@ -16,6 +16,6 @@
 #include "driverlib/timer.h"
 #include "driverlib/cpu.h"
 
-void timer_setup(void(*)(void), int);
+void timer_setup(void(*)(void *), int);
 
 #endif

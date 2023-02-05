@@ -3,26 +3,6 @@
 
 /opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
  
-Building file: "../ccfg.c"
-Invoking: Arm Compiler
-"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="ccfg.d_raw"  "../ccfg.c"
-Finished building: "../ccfg.c"
- 
-Building file: "../main.c"
-Invoking: Arm Compiler
-"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
-Finished building: "../main.c"
- 
-Building file: "../startup_ccs.c"
-Invoking: Arm Compiler
-"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Lab4Exercise2" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "../startup_ccs.c"
-Finished building: "../startup_ccs.c"
- 
-Building target: "Lab4Exercise2.out"
-Invoking: Arm Linker
-"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Lab4Exercise2.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab4Exercise2_linkInfo.xml" --rom_model -o "Lab4Exercise2.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "../cc13x0f128.cmd"  -llibc.a -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" 
-<Linking>
-Finished building target: "Lab4Exercise2.out"
- 
+gmake[1]: 'Lab4Exercise2.out' is up to date.
 
 **** Build Finished ****
