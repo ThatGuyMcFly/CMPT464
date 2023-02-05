@@ -9,8 +9,11 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./ccfg.obj" \
+"./led_module.obj" \
 "./main.obj" \
 "./startup_ccs.obj" \
+"./timer_module.obj" \
+"./uart_module.obj" \
 "../cc13x0f128.cmd" \
 $(GEN_CMDS__FLAG) \
 -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" \
@@ -155,8 +158,8 @@ Assignment1.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "ccfg.obj" "main.obj" "startup_ccs.obj" 
-	-$(RM) "ccfg.d" "main.d" "startup_ccs.d" 
+	-$(RM) "ccfg.obj" "led_module.obj" "main.obj" "startup_ccs.obj" "timer_module.obj" "uart_module.obj" 
+	-$(RM) "ccfg.d" "led_module.d" "main.d" "startup_ccs.d" "timer_module.d" "uart_module.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

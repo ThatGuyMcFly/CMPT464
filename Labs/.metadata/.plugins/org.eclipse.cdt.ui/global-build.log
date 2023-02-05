@@ -2176,3 +2176,945 @@ Finished building target: "Assignment1.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'uart_module.obj' failed
+"../uart_module.c", line 14: warning #48-D: incompatible redefinition of macro "NULL" (declared at line 186 of "/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h")
+"../uart_module.c", line 20: error #66: expected a ";"
+"../uart_module.c", line 32: error #148: declaration is incompatible with "void uart_send_data(char *)" (declared at line 16 of "../uart_module.h")
+"../uart_module.c", line 34: error #20: identifier "characters" is undefined
+"../uart_module.c", line 34: error #20: identifier "index" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxSize" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxTriggerLevel" is undefined
+"../uart_module.c", line 54: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 54: warning #70-D: integer conversion resulted in truncation
+"../uart_module.c", line 60: warning #169-D: argument of type "char *" is incompatible with parameter of type "int32_t"
+"../uart_module.c", line 89: error #148: declaration is incompatible with "void uart_setup(void (*)(int32_t), uint32_t)" (declared at line 17 of "../uart_module.h")
+"../uart_module.c", line 90: warning #515-D: a value of type "void (*)(char *)" cannot be assigned to an entity of type "void (*)(int32_t)"
+"../uart_module.c", line 92: error #20: identifier "rxTriggerLevel" is undefined
+8 errors detected in the compilation of "../uart_module.c".
+gmake: *** [uart_module.obj] Error 1
+"../main.c", line 18: error #20: identifier "character" is undefined
+"../main.c", line 29: warning #169-D: argument of type "void (*)(char *)" is incompatible with parameter of type "void (*)(int32_t)"
+"../main.c", line 29: error #141: too many arguments in function call
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+Finished building: "../timer_module.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'uart_module.obj' failed
+"../uart_module.c", line 14: warning #48-D: incompatible redefinition of macro "NULL" (declared at line 186 of "/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h")
+"../uart_module.c", line 20: error #66: expected a ";"
+"../uart_module.c", line 34: error #20: identifier "characters" is undefined
+"../uart_module.c", line 34: error #20: identifier "index" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxSize" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxTriggerLevel" is undefined
+"../uart_module.c", line 54: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 54: warning #70-D: integer conversion resulted in truncation
+"../uart_module.c", line 60: warning #169-D: argument of type "char *" is incompatible with parameter of type "int32_t"
+"../uart_module.c", line 90: warning #515-D: a value of type "void (*)(char *)" cannot be assigned to an entity of type "void (*)(int32_t)"
+"../uart_module.c", line 92: error #20: identifier "rxTriggerLevel" is undefined
+6 errors detected in the compilation of "../uart_module.c".
+gmake: *** [uart_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 18: error #20: identifier "character" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'uart_module.obj' failed
+"../uart_module.c", line 14: warning #48-D: incompatible redefinition of macro "NULL" (declared at line 186 of "/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h")
+"../uart_module.c", line 20: error #66: expected a ";"
+"../uart_module.c", line 34: error #20: identifier "characters" is undefined
+"../uart_module.c", line 34: error #20: identifier "index" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxSize" is undefined
+"../uart_module.c", line 42: error #20: identifier "rxTriggerLevel" is undefined
+"../uart_module.c", line 54: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 54: warning #70-D: integer conversion resulted in truncation
+"../uart_module.c", line 60: warning #169-D: argument of type "char *" is incompatible with parameter of type "int32_t"
+"../uart_module.c", line 90: warning #515-D: a value of type "void (*)(char *)" cannot be assigned to an entity of type "void (*)(int32_t)"
+"../uart_module.c", line 92: error #20: identifier "rxTriggerLevel" is undefined
+6 errors detected in the compilation of "../uart_module.c".
+gmake: *** [uart_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'uart_module.obj' failed
+"../uart_module.c", line 14: warning #48-D: incompatible redefinition of macro "NULL" (declared at line 186 of "/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h")
+"../uart_module.c", line 20: error #66: expected a ";"
+"../uart_module.c", line 43: error #20: identifier "rxSize" is undefined
+"../uart_module.c", line 43: error #20: identifier "rxTriggerLevel" is undefined
+"../uart_module.c", line 55: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 55: warning #70-D: integer conversion resulted in truncation
+"../uart_module.c", line 61: warning #169-D: argument of type "char *" is incompatible with parameter of type "int32_t"
+"../uart_module.c", line 91: warning #515-D: a value of type "void (*)(char *)" cannot be assigned to an entity of type "void (*)(int32_t)"
+"../uart_module.c", line 93: error #20: identifier "rxTriggerLevel" is undefined
+4 errors detected in the compilation of "../uart_module.c".
+gmake: *** [uart_module.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+"../uart_module.c", line 54: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 54: warning #70-D: integer conversion resulted in truncation
+"../uart_module.c", line 60: warning #169-D: argument of type "char *" is incompatible with parameter of type "int32_t"
+"../uart_module.c", line 90: warning #515-D: a value of type "void (*)(char *)" cannot be assigned to an entity of type "void (*)(int32_t)"
+Finished building: "../uart_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'Assignment1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+"../uart_module.c", line 54: warning #1696-D: multicharacter character literal (potential portability problem)
+"../uart_module.c", line 54: warning #70-D: integer conversion resulted in truncation
+Finished building: "../uart_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+Finished building: "../uart_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+Finished building: "../uart_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'Assignment1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 14: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 28: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 30: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 45: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 47: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 48: error #66: expected a ";"
+"../led_module.c", line 58: error #20: identifier "PRCM_DOMAIN_GPIO" is undefined
+10 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'timer_module.obj' failed
+"../timer_module.c", line 53: error #148: declaration is incompatible with "void timer_setup(void (*)(void), int)" (declared at line 19 of "../timer_module.h")
+1 error detected in the compilation of "../timer_module.c".
+gmake: *** [timer_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 18: error #85: invalid combination of type specifiers
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 20: error #20: identifier "subPeriod" is undefined
+"../main.c", line 51: error #20: identifier "tChose" is undefined
+"../main.c", line 46: warning #179-D: variable "index" was declared but never referenced
+"../main.c", line 67: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 71: warning #225-D: function "led_setup" declared implicitly
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'timer_module.obj' failed
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+1 error detected in the compilation of "../timer_module.c".
+gmake: *** [timer_module.obj] Error 1
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 14: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 28: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 30: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 45: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 47: error #20: identifier "GPIO_0_DOUT7_4" is undefined
+"../led_module.c", line 48: error #66: expected a ";"
+"../led_module.c", line 58: error #20: identifier "PRCM_DOMAIN_GPIO" is undefined
+10 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 20: error #20: identifier "subPeriod" is undefined
+"../main.c", line 51: error #20: identifier "tChose" is undefined
+"../main.c", line 46: warning #179-D: variable "index" was declared but never referenced
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 64: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 65: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 67: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 71: warning #225-D: function "led_setup" declared implicitly
+9 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 20: error #20: identifier "subPeriod" is undefined
+"../main.c", line 51: error #20: identifier "tChose" is undefined
+"../main.c", line 46: warning #179-D: variable "index" was declared but never referenced
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 64: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 65: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 67: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 71: warning #225-D: function "led_setup" declared implicitly
+9 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+1 error detected in the compilation of "../timer_module.c".
+gmake: *** [timer_module.obj] Error 1
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'timer_module.obj' failed
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'timer_module.obj' failed
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 20: error #20: identifier "subPeriod" is undefined
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+"../main.c", line 61: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 62: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 65: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 69: warning #225-D: function "led_setup" declared implicitly
+9 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+1 error detected in the compilation of "../timer_module.c".
+gmake: *** [timer_module.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+"../main.c", line 61: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 62: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 65: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 69: warning #225-D: function "led_setup" declared implicitly
+8 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'timer_module.obj' failed
+"../timer_module.h", line 19: error #20: identifier "uint23_t" is undefined
+1 error detected in the compilation of "../timer_module.c".
+gmake: *** [timer_module.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 19: error #41: expected an identifier
+"../main.c", line 19: error #66: expected a ";"
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+"../main.c", line 61: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 62: error #137: struct "<unnamed>" has no field "delays"
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 65: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 69: warning #225-D: function "led_setup" declared implicitly
+7 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+Finished building: "../timer_module.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 65: error #20: identifier "coolingPeriod" is undefined
+"../main.c", line 69: warning #225-D: function "led_setup" declared implicitly
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+"../main.c", line 63: error #137: struct "<unnamed>" has no field "subPeriod"
+"../main.c", line 67: error #137: struct "<unnamed>" has no field "subPeriod"
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 49: error #20: identifier "tChose" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'led_module.obj' failed
+"../led_module.c", line 29: error #66: expected a ";"
+"../led_module.c", line 31: error #66: expected a ";"
+"../led_module.c", line 46: error #66: expected a ";"
+"../led_module.c", line 48: error #66: expected a ";"
+4 errors detected in the compilation of "../led_module.c".
+gmake: *** [led_module.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+Finished building: "../led_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project exmptyProgram ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'exmptyProgram.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 20: error #85: invalid combination of type specifiers
+"../main.c", line 45: error #20: identifier "tChosed" is undefined
+"../main.c", line 51: error #76: operand of "*" must be a pointer
+"../main.c", line 53: error #76: operand of "*" must be a pointer
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../led_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_module.d_raw"  "../led_module.c"
+Finished building: "../led_module.c"
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+Finished building: "../uart_module.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 20: error #85: invalid combination of type specifiers
+"../main.c", line 51: error #76: operand of "*" must be a pointer
+"../main.c", line 53: error #76: operand of "*" must be a pointer
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 20: error #85: invalid combination of type specifiers
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'Assignment1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'Assignment1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 66: warning #225-D: function "timer_enable_interrupts" declared implicitly
+Finished building: "../main.c"
+ 
+Building file: "../uart_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="uart_module.d_raw"  "../uart_module.c"
+Finished building: "../uart_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+ 
+ undefined               first referenced
+  symbol                     in file     
+ ---------               ----------------
+ timer_enable_interrupts ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Assignment1.out" not built
+ 
+>> Compilation failure
+makefile:145: recipe for target 'Assignment1.out' failed
+gmake[1]: *** [Assignment1.out] Error 1
+gmake: *** [all] Error 2
+makefile:141: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 66: warning #225-D: function "timer_enable_interrupts" declared implicitly
+Finished building: "../main.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+ 
+ undefined               first referenced
+  symbol                     in file     
+ ---------               ----------------
+ timer_enable_interrupts ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Assignment1.out" not built
+ 
+>> Compilation failure
+makefile:145: recipe for target 'Assignment1.out' failed
+makefile:141: recipe for target 'all' failed
+gmake[1]: *** [Assignment1.out] Error 1
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 66: warning #225-D: function "timer_enable_interrupts" declared implicitly
+Finished building: "../main.c"
+ 
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+Finished building: "../timer_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+ 
+ undefined               first referenced
+  symbol                     in file     
+ ---------               ----------------
+ timer_enable_interrupts ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Assignment1.out" not built
+ 
+>> Compilation failure
+makefile:145: recipe for target 'Assignment1.out' failed
+makefile:141: recipe for target 'all' failed
+gmake[1]: *** [Assignment1.out] Error 1
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Assignment1 ****
+
+/opt/ti/ccs1040/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../timer_module.c"
+Invoking: Arm Compiler
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/home/martin/Documents/School/Winter2023/CMPT464/Labs/Assignment1" --include_path="/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272" --include_path="/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="timer_module.d_raw"  "../timer_module.c"
+Finished building: "../timer_module.c"
+ 
+Building target: "Assignment1.out"
+Invoking: Arm Linker
+"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Assignment1.map" --heap_size=0 --stack_size=256 -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Assignment1_linkInfo.xml" --rom_model -o "Assignment1.out" "./ccfg.obj" "./led_module.obj" "./main.obj" "./startup_ccs.obj" "./timer_module.obj" "./uart_module.obj" "../cc13x0f128.cmd"  -l"/opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "Assignment1.out"
+ 
+
+**** Build Finished ****

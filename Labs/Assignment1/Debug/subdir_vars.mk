@@ -8,32 +8,50 @@ CMD_SRCS += \
 
 C_SRCS += \
 ../ccfg.c \
+../led_module.c \
 ../main.c \
-../startup_ccs.c 
+../startup_ccs.c \
+../timer_module.c \
+../uart_module.c 
 
 C_DEPS += \
 ./ccfg.d \
+./led_module.d \
 ./main.d \
-./startup_ccs.d 
+./startup_ccs.d \
+./timer_module.d \
+./uart_module.d 
 
 OBJS += \
 ./ccfg.obj \
+./led_module.obj \
 ./main.obj \
-./startup_ccs.obj 
+./startup_ccs.obj \
+./timer_module.obj \
+./uart_module.obj 
 
 OBJS__QUOTED += \
 "ccfg.obj" \
+"led_module.obj" \
 "main.obj" \
-"startup_ccs.obj" 
+"startup_ccs.obj" \
+"timer_module.obj" \
+"uart_module.obj" 
 
 C_DEPS__QUOTED += \
 "ccfg.d" \
+"led_module.d" \
 "main.d" \
-"startup_ccs.d" 
+"startup_ccs.d" \
+"timer_module.d" \
+"uart_module.d" 
 
 C_SRCS__QUOTED += \
 "../ccfg.c" \
+"../led_module.c" \
 "../main.c" \
-"../startup_ccs.c" 
+"../startup_ccs.c" \
+"../timer_module.c" \
+"../uart_module.c" 
 
 
