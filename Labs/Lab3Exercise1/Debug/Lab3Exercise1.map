@@ -1,0 +1,343 @@
+******************************************************************************
+                  TI ARM Linker Unix v20.2.7                   
+******************************************************************************
+>> Linked Fri Jan 27 14:42:22 2023
+
+OUTPUT FILE NAME:   <Lab3Exercise1.out>
+ENTRY POINT SYMBOL: "ResetISR"  address: 00000dff
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00000ef2  0001f10e  R  X
+  GPRAM                 11000000   00002000  00000000  00002000  RW X
+  SRAM                  20000000   00005000  000001cc  00004e34  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000e62   00000e62    r-x
+  00000000    00000000    000000c8   000000c8    r-- .intvecs
+  000000c8    000000c8    00000d9a   00000d9a    r-x .text
+00000e64    00000e64    00000008   00000008    rw-
+  00000e64    00000e64    00000008   00000008    rw- .args
+00000e70    00000e70    00000030   00000030    r--
+  00000e70    00000e70    00000030   00000030    r-- .cinit
+0001ffa8    0001ffa8    00000058   00000058    r--
+  0001ffa8    0001ffa8    00000058   00000058    r-- .ccfg
+20000000    20000000    000000cc   00000000    rw-
+  20000000    20000000    000000c8   00000000    rw- .vtable_ram
+  200000c8    200000c8    00000004   00000000    rw- .data
+20004f00    20004f00    00000100   00000000    rw-
+  20004f00    20004f00    00000100   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c8     
+                  00000000    000000c8     startup_ccs.obj (.intvecs)
+
+.text      0    000000c8    00000d9a     
+                  000000c8    00000248     timer_interrupts.obj (.text)
+                  00000310    00000130     driverlib.lib : setup_rom.obj (.text:NOROM_SetupAfterColdResetWakeupFromShutDownCfg3)
+                  00000440    000000f0                   : setup_rom.obj (.text:NOROM_SetupAfterColdResetWakeupFromShutDownCfg2)
+                  00000530    000000c0                   : setup.obj (.text:TrimAfterColdResetWakeupFromShutDown)
+                  000005f0    000000a8                   : setup.obj (.text:NOROM_SetupTrimDevice)
+                  00000698    000000a4                   : setup_rom.obj (.text:NOROM_SetupAfterColdResetWakeupFromShutDownCfg1)
+                  0000073c    0000009c     rtsv7M3_T_le_eabi.lib : memcpy_t2.asm.obj (.text)
+                  000007d8    00000074     driverlib.lib : setup_rom.obj (.text:NOROM_SetupSetVddrLevel)
+                  0000084c    00000070                   : chipinfo.obj (.text:NOROM_ChipInfo_GetHwRevision)
+                  000008bc    0000006c                   : setup_rom.obj (.text:NOROM_SetupGetTrimForAmpcompCtrl)
+                  00000928    00000068                   : setup_rom.obj (.text:NOROM_SetupGetTrimForAnabypassValue1)
+                  00000990    00000068     rtsv7M3_T_le_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  000009f8    00000060     driverlib.lib : osc.obj (.text:NOROM_OSCClockSourceSet)
+                  00000a58    00000050                   : setup_rom.obj (.text:NOROM_SetupSetCacheModeAccordingToCcfgSetting)
+                  00000aa8    00000048                   : chipinfo.obj (.text:NOROM_ChipInfo_GetChipFamily)
+                  00000af0    00000044     rtsv7M3_T_le_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00000b34    00000040     driverlib.lib : timer.obj (.text:NOROM_TimerIntRegister)
+                  00000b74    00000034                   : interrupt.obj (.text:NOROM_IntRegister)
+                  00000ba8    00000030                   : setup_rom.obj (.text:NOROM_SetupSetAonRtcSubSecInc)
+                  00000bd8    00000030                   : timer.obj (.text:TimerIntNumberGet)
+                  00000c08    0000002c                   : ddi.obj (.text:NOROM_DDI32RegWrite)
+                  00000c34    0000002c                   : osc.obj (.text:NOROM_OSCClockSourceGet)
+                  00000c60    0000002c                   : setup_rom.obj (.text:NOROM_SetupGetTrimForRadcExtCfg)
+                  00000c8c    00000024     rtsv7M3_T_le_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00:_c_int00)
+                  00000cb0    00000020     driverlib.lib : setup_rom.obj (.text:NOROM_SetupGetTrimForXoscHfCtl)
+                  00000cd0    0000001c                   : setup_rom.obj (.text:NOROM_SetupGetTrimForAmpcompTh2)
+                  00000cec    0000001c                   : setup_rom.obj (.text:NOROM_SetupGetTrimForRcOscLfRtuneCtuneTrim)
+                  00000d08    0000001c     rtsv7M3_T_le_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  00000d24    0000001a     main.obj (.text)
+                  00000d3e    00000002     --HOLE-- [fill = 0]
+                  00000d40    00000018     driverlib.lib : setup_rom.obj (.text:NOROM_SetupGetTrimForAdcShModeEn)
+                  00000d58    00000018                   : setup_rom.obj (.text:NOROM_SetupGetTrimForAdcShVbufEn)
+                  00000d70    00000018                   : setup_rom.obj (.text:NOROM_SetupGetTrimForAmpcompTh1)
+                  00000d88    00000018                   : setup_rom.obj (.text:NOROM_SetupGetTrimForDblrLoopFilterResetVoltage)
+                  00000da0    00000018                   : setup_rom.obj (.text:NOROM_SetupGetTrimForRcOscLfIBiasTrim)
+                  00000db8    00000018                   : setup_rom.obj (.text:NOROM_SetupGetTrimForXoscLfRegulatorAndCmirrwrRatio)
+                  00000dd0    00000018     rtsv7M3_T_le_eabi.lib : args_main.c.obj (.text:_args_main)
+                  00000de8    00000016     driverlib.lib : chipinfo.obj (.text:NOROM_ThisCodeIsBuiltForCC13xxHwRev20AndLater_HaltIfViolated)
+                  00000dfe    00000016     startup_ccs.obj (.text)
+                  00000e14    00000010     driverlib.lib : setup_rom.obj (.text:NOROM_SetupGetTrimForXoscHfFastStart)
+                  00000e24    00000010                   : setup_rom.obj (.text:NOROM_SetupGetTrimForXoscHfIbiastherm)
+                  00000e34    0000000e     rtsv7M3_T_le_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00000e42    0000000c     driverlib.lib : cpu.obj (.text:NOROM_CPUcpsid)
+                  00000e4e    0000000c                   : cpu.obj (.text:NOROM_CPUcpsie)
+                  00000e5a    00000004     rtsv7M3_T_le_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00000e5e    00000004                           : exit.c.obj (.text:abort:abort)
+
+.binit     0    00000000    00000000     
+
+.cinit     0    00000e70    00000030     
+                  00000e70    0000000c     (__TI_handler_table)
+                  00000e7c    00000004     --HOLE-- [fill = 0]
+                  00000e80    00000008     (.cinit..vtable_ram.load) [load image, compression = zero_init]
+                  00000e88    00000007     (.cinit..data.load) [load image, compression = lzss]
+                  00000e8f    00000001     --HOLE-- [fill = 0]
+                  00000e90    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.ccfg      0    0001ffa8    00000058     
+                  0001ffa8    00000058     ccfg.obj (.ccfg:retain)
+
+.vtable_ram 
+*          0    20000000    000000c8     UNINITIALIZED
+                  20000000    000000c8     driverlib.lib : interrupt.obj (.vtable_ram)
+
+.data      0    200000c8    00000004     UNINITIALIZED
+                  200000c8    00000004     timer_interrupts.obj (.data)
+
+.stack     0    20004f00    00000100     UNINITIALIZED
+                  20004f00    00000004     rtsv7M3_T_le_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20004f04    000000fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+.args      0    00000e64    00000008     
+                  00000e64    00000008     --HOLE-- [fill = 0]
+
+MODULE SUMMARY
+
+       Module                       code   ro data   rw data
+       ------                       ----   -------   -------
+    ./
+       timer_interrupts.obj         584    0         4      
+       startup_ccs.obj              22     200       0      
+       ccfg.obj                     0      88        0      
+       main.obj                     26     0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       632    288       4      
+                                                            
+    /home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib/rtsv7M3_T_le_eabi.lib
+       memcpy_t2.asm.obj            156    0         0      
+       copy_decompress_lzss.c.obj   104    0         0      
+       autoinit.c.obj               68     0         0      
+       boot_cortex_m.c.obj          36     0         0      
+       copy_zero_init.c.obj         28     0         0      
+       args_main.c.obj              24     0         0      
+       copy_decompress_none.c.obj   14     0         0      
+       exit.c.obj                   4      0         0      
+       pre_init.c.obj               4      0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       438    0         0      
+                                                            
+    /opt/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc13xxware_2_04_03_17272/driverlib/bin/ccs/driverlib.lib
+       setup_rom.obj                1472   0         0      
+       setup.obj                    360    0         0      
+       interrupt.obj                52     0         200    
+       chipinfo.obj                 206    0         0      
+       osc.obj                      140    0         0      
+       timer.obj                    112    0         0      
+       ddi.obj                      44     0         0      
+       cpu.obj                      24     0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       2410   0         200    
+                                                            
+       Stack:                       0      0         256    
+       Linker Generated:            0      43        0      
+    +--+----------------------------+------+---------+---------+
+       Grand Total:                 3480   331       460    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00000e90 records: 2, size/record: 8, table size: 16
+	.vtable_ram: load addr=00000e80, load size=00000008 bytes, run addr=20000000, run size=000000c8 bytes, compression=zero_init
+	.data: load addr=00000e88, load size=00000007 bytes, run addr=200000c8, run size=00000004 bytes, compression=lzss
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00000e70 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                                        
+-------   ----                                                        
+00000e5f  C$$EXIT                                                     
+00000e43  NOROM_CPUcpsid                                              
+00000e4f  NOROM_CPUcpsie                                              
+00000aa9  NOROM_ChipInfo_GetChipFamily                                
+0000084d  NOROM_ChipInfo_GetHwRevision                                
+00000c09  NOROM_DDI32RegWrite                                         
+00000b75  NOROM_IntRegister                                           
+00000c35  NOROM_OSCClockSourceGet                                     
+000009f9  NOROM_OSCClockSourceSet                                     
+00000699  NOROM_SetupAfterColdResetWakeupFromShutDownCfg1             
+00000441  NOROM_SetupAfterColdResetWakeupFromShutDownCfg2             
+00000311  NOROM_SetupAfterColdResetWakeupFromShutDownCfg3             
+00000d41  NOROM_SetupGetTrimForAdcShModeEn                            
+00000d59  NOROM_SetupGetTrimForAdcShVbufEn                            
+000008bd  NOROM_SetupGetTrimForAmpcompCtrl                            
+00000d71  NOROM_SetupGetTrimForAmpcompTh1                             
+00000cd1  NOROM_SetupGetTrimForAmpcompTh2                             
+00000929  NOROM_SetupGetTrimForAnabypassValue1                        
+00000d89  NOROM_SetupGetTrimForDblrLoopFilterResetVoltage             
+00000c61  NOROM_SetupGetTrimForRadcExtCfg                             
+00000da1  NOROM_SetupGetTrimForRcOscLfIBiasTrim                       
+00000ced  NOROM_SetupGetTrimForRcOscLfRtuneCtuneTrim                  
+00000cb1  NOROM_SetupGetTrimForXoscHfCtl                              
+00000e15  NOROM_SetupGetTrimForXoscHfFastStart                        
+00000e25  NOROM_SetupGetTrimForXoscHfIbiastherm                       
+00000db9  NOROM_SetupGetTrimForXoscLfRegulatorAndCmirrwrRatio         
+00000ba9  NOROM_SetupSetAonRtcSubSecInc                               
+00000a59  NOROM_SetupSetCacheModeAccordingToCcfgSetting               
+000007d9  NOROM_SetupSetVddrLevel                                     
+000005f1  NOROM_SetupTrimDevice                                       
+00000de9  NOROM_ThisCodeIsBuiltForCC13xxHwRev20AndLater_HaltIfViolated
+00000b35  NOROM_TimerIntRegister                                      
+00000dff  ResetISR                                                    
+20005000  __STACK_END                                                 
+00000100  __STACK_SIZE                                                
+20005000  __STACK_TOP                                                 
+00000e90  __TI_CINIT_Base                                             
+00000ea0  __TI_CINIT_Limit                                            
+00000e70  __TI_Handler_Table_Base                                     
+00000e7c  __TI_Handler_Table_Limit                                    
+00000af1  __TI_auto_init_nobinit_nopinit                              
+00000991  __TI_decompress_lzss                                        
+00000e35  __TI_decompress_none                                        
+ffffffff  __TI_pprof_out_hndl                                         
+ffffffff  __TI_prof_data_size                                         
+ffffffff  __TI_prof_data_start                                        
+00000000  __TI_static_base__                                          
+00000d09  __TI_zero_init_nomemset                                     
+0000073d  __aeabi_memcpy                                              
+0000073d  __aeabi_memcpy4                                             
+0000073d  __aeabi_memcpy8                                             
+ffffffff  __binit__                                                   
+00000e64  __c_args__                                                  
+0001ffa8  __ccfg                                                      
+UNDEFED   __mpu_init                                                  
+20004f00  __stack                                                     
+20000000  __start___llvm_prf_cnts                                     
+20000000  __stop___llvm_prf_cnts                                      
+00000dd1  _args_main                                                  
+00000c8d  _c_int00                                                    
+UNDEFED   _system_post_cinit                                          
+00000e5b  _system_pre_init                                            
+00000e5f  abort                                                       
+ffffffff  binit                                                       
+20000000  g_pfnRAMVectors                                             
+00000000  g_pfnVectors                                                
+200000c8  led_on                                                      
+00000d31  main                                                        
+0000073d  memcpy                                                      
+00000195  setup_led                                                   
+00000245  setup_timer                                                 
+000002d5  setup_timer_interrupt                                       
+000001e9  timer_interrupt_fn                                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                                        
+-------   ----                                                        
+00000000  __TI_static_base__                                          
+00000000  g_pfnVectors                                                
+00000100  __STACK_SIZE                                                
+00000195  setup_led                                                   
+000001e9  timer_interrupt_fn                                          
+00000245  setup_timer                                                 
+000002d5  setup_timer_interrupt                                       
+00000311  NOROM_SetupAfterColdResetWakeupFromShutDownCfg3             
+00000441  NOROM_SetupAfterColdResetWakeupFromShutDownCfg2             
+000005f1  NOROM_SetupTrimDevice                                       
+00000699  NOROM_SetupAfterColdResetWakeupFromShutDownCfg1             
+0000073d  __aeabi_memcpy                                              
+0000073d  __aeabi_memcpy4                                             
+0000073d  __aeabi_memcpy8                                             
+0000073d  memcpy                                                      
+000007d9  NOROM_SetupSetVddrLevel                                     
+0000084d  NOROM_ChipInfo_GetHwRevision                                
+000008bd  NOROM_SetupGetTrimForAmpcompCtrl                            
+00000929  NOROM_SetupGetTrimForAnabypassValue1                        
+00000991  __TI_decompress_lzss                                        
+000009f9  NOROM_OSCClockSourceSet                                     
+00000a59  NOROM_SetupSetCacheModeAccordingToCcfgSetting               
+00000aa9  NOROM_ChipInfo_GetChipFamily                                
+00000af1  __TI_auto_init_nobinit_nopinit                              
+00000b35  NOROM_TimerIntRegister                                      
+00000b75  NOROM_IntRegister                                           
+00000ba9  NOROM_SetupSetAonRtcSubSecInc                               
+00000c09  NOROM_DDI32RegWrite                                         
+00000c35  NOROM_OSCClockSourceGet                                     
+00000c61  NOROM_SetupGetTrimForRadcExtCfg                             
+00000c8d  _c_int00                                                    
+00000cb1  NOROM_SetupGetTrimForXoscHfCtl                              
+00000cd1  NOROM_SetupGetTrimForAmpcompTh2                             
+00000ced  NOROM_SetupGetTrimForRcOscLfRtuneCtuneTrim                  
+00000d09  __TI_zero_init_nomemset                                     
+00000d31  main                                                        
+00000d41  NOROM_SetupGetTrimForAdcShModeEn                            
+00000d59  NOROM_SetupGetTrimForAdcShVbufEn                            
+00000d71  NOROM_SetupGetTrimForAmpcompTh1                             
+00000d89  NOROM_SetupGetTrimForDblrLoopFilterResetVoltage             
+00000da1  NOROM_SetupGetTrimForRcOscLfIBiasTrim                       
+00000db9  NOROM_SetupGetTrimForXoscLfRegulatorAndCmirrwrRatio         
+00000dd1  _args_main                                                  
+00000de9  NOROM_ThisCodeIsBuiltForCC13xxHwRev20AndLater_HaltIfViolated
+00000dff  ResetISR                                                    
+00000e15  NOROM_SetupGetTrimForXoscHfFastStart                        
+00000e25  NOROM_SetupGetTrimForXoscHfIbiastherm                       
+00000e35  __TI_decompress_none                                        
+00000e43  NOROM_CPUcpsid                                              
+00000e4f  NOROM_CPUcpsie                                              
+00000e5b  _system_pre_init                                            
+00000e5f  C$$EXIT                                                     
+00000e5f  abort                                                       
+00000e64  __c_args__                                                  
+00000e70  __TI_Handler_Table_Base                                     
+00000e7c  __TI_Handler_Table_Limit                                    
+00000e90  __TI_CINIT_Base                                             
+00000ea0  __TI_CINIT_Limit                                            
+0001ffa8  __ccfg                                                      
+20000000  __start___llvm_prf_cnts                                     
+20000000  __stop___llvm_prf_cnts                                      
+20000000  g_pfnRAMVectors                                             
+200000c8  led_on                                                      
+20004f00  __stack                                                     
+20005000  __STACK_END                                                 
+20005000  __STACK_TOP                                                 
+ffffffff  __TI_pprof_out_hndl                                         
+ffffffff  __TI_prof_data_size                                         
+ffffffff  __TI_prof_data_start                                        
+ffffffff  __binit__                                                   
+ffffffff  binit                                                       
+UNDEFED   __mpu_init                                                  
+UNDEFED   _system_post_cinit                                          
+
+[73 symbols]
