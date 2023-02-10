@@ -1,5 +1,5 @@
 /**
- * CMPT464 Lab 4 Exercise 1
+ * CMPT464 Lab 5
  * Martin Knoetze
  * SN: 3086754
  *
