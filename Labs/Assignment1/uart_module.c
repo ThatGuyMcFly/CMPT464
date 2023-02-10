@@ -21,19 +21,6 @@ uint32_t rxTriggerLevel;
 const size_t rxSize[5] = {4, 8, 16, 24, 28};
 
 /**
- * Sends an array of characters to be transmitted
- *
- * Parameters
- *
- *      character - the character to be transmitted
- */
-void uart_send_data(char character) {
-
-    UARTCharPut(UART0_BASE, (uint8_t) character);
-
-}
-
-/**
  * Function for handling the uart interruption and calling the callback functions
  */
 void uart_rx_interrupt_handler(){
@@ -69,6 +56,24 @@ void uart_rx_interrupt_handler(){
     free(characters);
 }
 
+/**
+ * Sends a character to be transmitted
+ *
+ * Parameters
+ *
+ *      character - the character to be transmitted
+ */
+void uart_send_data(char character) {
+
+    UARTCharPut(UART0_BASE, (uint8_t) character);
+
+}
+
+/**
+ * Set whether the uart interrupt is enabled
+ *
+ *      setInterrupt - a SET_INTERRUPT value for whether to enable the interrupt
+ */
 void uart_set_interrupt(SET_INTERRUPT setInterrupt){
 
     if (setInterrupt == SET_INTERRUPT_ENABLED) {

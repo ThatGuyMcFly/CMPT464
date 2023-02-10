@@ -18,15 +18,20 @@ void (*timer_callback_function)(void) = NULL;
  */
 void timer_interrupt_handler() {
 
-    // Disable and clear the interrupt
-    TimerIntDisable(GPT0_BASE,TIMER_TIMA_TIMEOUT);
-    TimerIntClear(GPT0_BASE, TIMER_TIMA_TIMEOUT);
+    timer_disable_and_clear_interrupt();
 
     if(timer_callback_function != NULL) {
         timer_callback_function();
     }
 }
 
+/**
+ * Enables the timer and sets the next delay
+ *
+ * parameters
+ *
+ *      delay - an unsigned 32 bit integer to set the next delay in milliseconds
+ */
 void timer_enable_interrupt(uint32_t delay) {
     // Configure timer to use timer A in one shot mode
     TimerConfigure(GPT0_BASE, TIMER_CFG_ONE_SHOT);
@@ -42,13 +47,21 @@ void timer_enable_interrupt(uint32_t delay) {
 }
 
 /**
+ * Disables and clears the timer interrupt
+ */
+void timer_disable_and_clear_interrupt() {
+    TimerIntDisable(GPT0_BASE,TIMER_TIMA_TIMEOUT);
+    TimerIntClear(GPT0_BASE, TIMER_TIMA_TIMEOUT);
+}
+
+/**
  * Sets up the timer
  *
  * parameters
  *
- *  passedInFunction - a function that takes void pointer as a parameter and returns nothing. This function will be called in the timer interrupt function
+ *      passedInFunction - a function that takes void pointer as a parameter and returns nothing. This function will be called in the timer interrupt function
  *
- *  passedDelay - an integer that sets the delay time in milliseconds
+ *      passedDelay - an integer that sets the delay time in milliseconds
  */
 void timer_setup(void (*passedInCallbackFunction)(void), uint32_t delay) {
 

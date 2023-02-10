@@ -17,6 +17,7 @@
 #include "driverlib/cpu.h"
 
 void timer_enable_interrupt(uint32_t);
+void timer_disable_and_clear_interrupt();
 void timer_setup(void(*)(void), uint32_t);
 
 #endif

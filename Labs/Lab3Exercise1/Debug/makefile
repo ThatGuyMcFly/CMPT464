@@ -122,34 +122,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Lab3Exercise2.out \
+Lab3Exercise1.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Lab3Exercise2.out" \
+"Lab3Exercise1.out" \
 
 BIN_OUTPUTS += \
-Lab3Exercise2.hex \
+Lab3Exercise1.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"Lab3Exercise2.hex" \
+"Lab3Exercise1.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Lab3Exercise2.out"
+	@$(MAKE) --no-print-directory -Onone "Lab3Exercise1.out"
 
 # Tool invocations
-Lab3Exercise2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Lab3Exercise1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Lab3Exercise2.map" --heap_size=0 --stack_size=256 -i"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab3Exercise2_linkInfo.xml" --rom_model -o "Lab3Exercise2.out" $(ORDERED_OBJS)
+	"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M3 --code_state=16 -me -g --c99 --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number -z -m"Lab3Exercise1.map" --heap_size=0 --stack_size=256 -i"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_suppress=16002-D --diag_suppress=10247-D --diag_suppress=10325-D --diag_suppress=10229-D --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab3Exercise1_linkInfo.xml" --rom_model -o "Lab3Exercise1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-Lab3Exercise2.hex: $(EXE_OUTPUTS)
+Lab3Exercise1.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: Arm Hex Utility'
-	"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off --intel -o "Lab3Exercise2.hex" $(EXE_OUTPUTS__QUOTED)
+	"/home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off --intel -o "Lab3Exercise1.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 

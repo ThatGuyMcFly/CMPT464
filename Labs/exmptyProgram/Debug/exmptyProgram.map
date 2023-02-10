@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker Unix v20.2.5                   
 ******************************************************************************
->> Linked Sun Feb  5 09:25:29 2023
+>> Linked Fri Feb 10 13:53:00 2023
 
 OUTPUT FILE NAME:   <exmptyProgram.out>
 ENTRY POINT SYMBOL: "ResetISR"  address: 0000098b
@@ -108,7 +108,7 @@ MODULE SUMMARY
     +--+---------------------+------+---------+---------+
        Total:                26     288       0      
                                                      
-    /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib/rtsv7M3_T_le_eabi.lib
+    /home/martin/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib/rtsv7M3_T_le_eabi.lib
        boot_cortex_m.c.obj   28     0         0      
        args_main.c.obj       24     0         0      
        exit.c.obj            4      0         0      
