@@ -57,16 +57,20 @@ void uart_rx_interrupt_handler(){
 }
 
 /**
- * Sends a character to be transmitted
+ * Transmits a string of characters
  *
  * Parameters
  *
- *      character - the character to be transmitted
+ *      characters - the string to be transmitted
  */
-void uart_send_data(char character) {
+void uart_send_data(char * characters) {
 
-    UARTCharPut(UART0_BASE, (uint8_t) character);
+    int index = 0;
 
+    while(characters[index] != '\0'){
+        UARTCharPut(UART0_BASE, (uint8_t) characters[index]);
+        index++;
+    }
 }
 
 /**

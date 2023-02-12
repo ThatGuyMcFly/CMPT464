@@ -16,7 +16,7 @@
 typedef enum {SET_INTERRUPT_ENABLED, SET_INTERRUPT_DISABLED} SET_INTERRUPT;
 
 void uart_set_interrupt(SET_INTERRUPT);
-void uart_send_data(char);
+void uart_send_data(char *);
 void uart_setup(void(*)(char*), uint32_t, uint32_t, uint32_t);
 
 #endif /* UART_MODULE_H_ */
