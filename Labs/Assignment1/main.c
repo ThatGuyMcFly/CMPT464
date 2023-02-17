@@ -16,6 +16,7 @@
 #include "timer_module.h"
 
 #define STOP_VALUE 0xff
+#define STOP_STRING "FF  "
 
 int tCurrent = 24;
 int tChosen = 0;
@@ -43,9 +44,7 @@ mode * currentModePtr;
  */
 void uart_callback(char * characters) {
 
-    char * stopString = "FF  ";
-
-    if(strcmp(characters, stopString) != 0) {
+    if(strcmp(characters, STOP_STRING) != 0) {
         tChosen = (int)(characters[0] - '0') * 10;
         tChosen += (int)(characters[1] - '0');
     } else {
@@ -66,7 +65,11 @@ void uart_callback(char * characters) {
 
         led_turn_on(currentModePtr->led_id);
 
-        uart_send_data(currentModePtr->character);
+        char character_to_send[] = "\n\r \0";
+
+        character_to_send[2] = currentModePtr->character;
+
+        uart_send_data(character_to_send);
 
         timer_enable_interrupt(currentModePtr->delays[currentModePtr->currentSubPeriod]);
     }
@@ -86,8 +89,16 @@ int random_0_1() {
 
 /**
  * Converts a 2 digit unsigned 32 bit integer into a two character string
+ *
+ * parameters
+ *
+ *      data - an unsigned 32 bit integer to be converted to characters
+ *
+ *      characters - a string of characters into which the 2 converted digits will be placed
+ *
+ *      index - the starting index of where to place the 2 converted digits
  */
-void convert_to_char(uint32_t data, char * characters) {
+void convert_to_char(uint32_t data, char * characters, int index) {
 
     int digit_1 = data / 10;
     int digit_2 = data - digit_1 * 10;
@@ -95,41 +106,39 @@ void convert_to_char(uint32_t data, char * characters) {
     char character1 = '0' + digit_1;
     char character2 = '0' + digit_2;
 
-    characters[0] = character1;
-    characters[1] = character2;
+    characters[index] = character1;
+    characters[index + 1] = character2;
 }
 
 /**
  * Sends the current and chosen temperature to the uart module to be transmitted
  */
 void send_temperature_message() {
-    char temperatureString[2];
-    uart_send_data('(');
+    char temperatureString[] = "(  ,  )\n\r";
 
-    convert_to_char((uint32_t) tCurrent, temperatureString);
+    convert_to_char(tCurrent, temperatureString, 1);
 
-    for (int i = 0; i < 2; i++) {
-        uart_send_data(temperatureString[i]);
+    if (tChosen != STOP_VALUE) {
+        convert_to_char(tChosen, temperatureString, 4);
+    } else {
+        temperatureString[4] = 'F';
+        temperatureString[5] = 'F';
     }
 
-    uart_send_data(',');
-
-    convert_to_char((uint32_t) tChosen, temperatureString);
-
-    for (int i = 0; i < 2; i++) {
-        uart_send_data(temperatureString[i]);
-    }
-
-    uart_send_data(')');
+    uart_send_data(temperatureString);
 }
 
 /**
  * increments or decrements the current temperature depending on the current mode
  */
 void increment_decrement_temperature() {
+
+
     if (currentModePtr->character == 'C') {
+        // Decrement the temperature if in cooling mode
         tCurrent -= random_0_1();
     } else if (currentModePtr->character == 'H') {
+        // Increment the temperature if in heating mode
         tCurrent += random_0_1();
     }
 }
@@ -143,10 +152,14 @@ void timer_callback() {
 
         uart_set_interrupt(SET_INTERRUPT_ENABLED);
 
-        if (tCurrent != tChosen && tCurrent != STOP_VALUE) {
+        if (tCurrent != tChosen && tChosen != STOP_VALUE) {
             currentModePtr->currentSubPeriod = ON;
 
-            uart_send_data(currentModePtr->character);
+            char character_to_send[] = " \0";
+
+            character_to_send[0] = currentModePtr->character;
+
+            uart_send_data(character_to_send);
 
             led_turn_on(currentModePtr->led_id);
 
@@ -154,6 +167,7 @@ void timer_callback() {
 
             timer_enable_interrupt(currentModePtr->delays[currentModePtr->currentSubPeriod]);
         } else {
+            tChosen = tCurrent;
             timer_disable_and_clear_interrupt();
         }
 
