@@ -1,9 +1,11 @@
 /**
- * CMPT464 Lab 4 Exercise 2
+ * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
  *
  * timer_module.c
+ *
+ * This module handles the setup of the timer and its interrupt.
  */
 
 #include "timer_module.h"

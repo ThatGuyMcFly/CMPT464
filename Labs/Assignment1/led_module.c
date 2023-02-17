@@ -1,8 +1,11 @@
-/*
+/**
+ * CMPT464 Assignment 1
+ * Martin Knoetze
+ * SN: 3086754
+ *
  * led_module.c
  *
- *  Created on: Feb. 5, 2023
- *      Author: martin
+ * This module handles the setup and toggling of the LEDs
  */
 
 #include "led_module.h"

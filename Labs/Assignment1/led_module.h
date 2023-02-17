@@ -1,9 +1,13 @@
-/*
+/**
+ * CMPT464 Assignment 1
+ * Martin Knoetze
+ * SN: 3086754
+ *
  * led_module.h
  *
- *  Created on: Feb. 5, 2023
- *      Author: martin
+ * This is the header file for the LED module
  */
+
 
 #ifndef LED_MODULE_H_
 #define LED_MODULE_H_

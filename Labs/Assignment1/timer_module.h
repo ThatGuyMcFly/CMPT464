@@ -1,9 +1,11 @@
 /**
- * CMPT464 Lab 4 Exercise 1
+ * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
  *
  * timer_module.h
+ *
+ * This is the header file for the timer module
  */
 
 #ifndef TIMER_MODULE_H_
