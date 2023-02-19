@@ -1,9 +1,11 @@
 /**
- * CMPT464 Lab 4 Exercise 2
+ * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
  *
  * uart_module.c
+ *
+ * This module handles receiving and transmitting data with the UART
  */
 
 #include "uart_module.h"
@@ -21,7 +23,7 @@ uint32_t rxTriggerLevel;
 const size_t rxSize[5] = {4, 8, 16, 24, 28};
 
 /**
- * Function for handling the uart interruption and calling the callback functions
+ * Function for handling the uart receive interruption and calling the callback functions
  */
 void uart_rx_interrupt_handler(){
 
@@ -67,6 +69,7 @@ void uart_send_data(char * characters) {
 
     int index = 0;
 
+    // interates over the string and sends each character
     while(characters[index] != '\0'){
         UARTCharPut(UART0_BASE, (uint8_t) characters[index]);
         index++;

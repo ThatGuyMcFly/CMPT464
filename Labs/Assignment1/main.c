@@ -4,6 +4,15 @@
  * SN: 3086754
  *
  * main.c
+ *
+ * This Program simulates an air conditioning control system. The user enters a desired
+ * temperature between 20 and 30 degrees, and the system triggers either a heating or
+ * cooling period to reach the desired temperature. The program will output a character
+ * representing the period it is in as well as lighting an LED on the board to represent
+ * the current period.
+ *
+ * This is the main file of the program. This file handles the logic of switching between
+ * the heating and cooling periods, and generating the output for the periods.
  */
 
 #include <stdio.h>
@@ -15,25 +24,60 @@
 #include "uart_module.h"
 #include "timer_module.h"
 
-#define STOP_VALUE 0xff
 #define STOP_STRING "FF  "
 
-int tCurrent = 24;
+int tCurrent = 0;
 int tChosen = 0;
 
-typedef enum {ON, OFF} SUB_PERIOD;
+int stopFlag = 0;
 
+typedef enum {OFF, ON} subPeriod;
+
+typedef enum {SLEEP, ACTIVE} mode;
+
+// struct for handling the 2 periods of the program
 typedef struct {
     int led_id;
     char character;
     int delays[2];
-    SUB_PERIOD currentSubPeriod;
-} mode;
+} period;
 
-mode heatingMode;
-mode coolingMode;
+// Setup the periods and the current period pointer
+period heatingPeriod;
 
-mode * currentModePtr;
+period coolingPeriod;
+
+period * currentPeriodPtr;
+
+// initialize the current sub period to off
+subPeriod currentSubPeriod = OFF;
+
+// initialize the current mode to sleep
+mode currentMode = SLEEP;
+
+/**
+ * Handles when a new temperature is entered
+ */
+void handleNewChosenTemperature() {
+    // Set the current period based on the current and chosen temperatures
+    if(tCurrent < tChosen) {
+        currentPeriodPtr = &heatingPeriod;
+    } else if (tCurrent > tChosen) {
+        currentPeriodPtr = &coolingPeriod;
+    }
+
+    // If in sleep mode, set mode to active, print a new line and enable the time interrupt
+    if (currentMode == SLEEP) {
+        // set current mode to active
+        currentMode = ACTIVE;
+
+        // print a new line
+        uart_send_data("\n\r\0");
+
+        // call function to enable the interrupt with 0 delay to immediately trigger the timer interrupt
+        timer_enable_interrupt(0);
+    }
+}
 
 /**
  * The callback functions to be called by the uart interrupt handler
@@ -43,37 +87,71 @@ mode * currentModePtr;
  *      characters - string of characters sent from the uart interrupt function
  */
 void uart_callback(char * characters) {
-
-    if(strcmp(characters, STOP_STRING) != 0) {
-        tChosen = (int)(characters[0] - '0') * 10;
-        tChosen += (int)(characters[1] - '0');
-    } else {
-        tChosen = STOP_VALUE;
+    int newTemp = 0;
+    // Check if the characters entered are the stop string
+    if (strcmp(characters, STOP_STRING) == 0) {
+        // Set the stop flag
+        stopFlag = 1;
+    } else if(characters[2] == ' ' && characters[3] == ' ') {
+        // Set tChosen to the integer value of the first two characters passed in
+        newTemp = (int)(characters[0] - '0') * 10;
+        newTemp += (int)(characters[1] - '0');
     }
 
-    if(tChosen >= 20 && tChosen <= 30) {
-
-        if(tCurrent < tChosen) {
-            currentModePtr = &heatingMode;
-        } else if (tCurrent > tChosen) {
-            currentModePtr = &coolingMode;
-        } else {
-            return;
-        }
-
-        currentModePtr->currentSubPeriod = ON;
-
-        led_turn_on(currentModePtr->led_id);
-
-        char character_to_send[] = "\n\r \0";
-
-        character_to_send[2] = currentModePtr->character;
-
-        uart_send_data(character_to_send);
-
-        timer_enable_interrupt(currentModePtr->delays[currentModePtr->currentSubPeriod]);
+    // Ensure the chosen temperature is in the appropriate range
+    if(newTemp >= 20 && newTemp <= 30 && newTemp != tCurrent) {
+        tChosen = newTemp;
+        // Call the function to handle a new temperature
+        handleNewChosenTemperature();
+    } else if (stopFlag != 1) {
+        // print a new line if invalid temperature and not stop value
+        uart_send_data("\n\r\0");
     }
+}
 
+/**
+ * Converts a 2 digit unsigned 32 bit integer into a two character string
+ *
+ * parameters
+ *
+ *      data - an integer to be converted to characters
+ *
+ *      characters - a string of characters into which the 2 converted digits will be placed
+ *
+ *      index - the starting index of where to place the 2 converted digits
+ */
+void convert_to_char(int data, char * characters, int index) {
+
+    // Isolate the first and second digits into their own variables
+    int digit_1 = data / 10;
+    int digit_2 = data - digit_1 * 10;
+
+    // Convert the digits to characters
+    char character1 = '0' + digit_1;
+    char character2 = '0' + digit_2;
+
+    // Put the characters in order starting at the specified index
+    characters[index] = character1;
+    characters[index + 1] = character2;
+}
+
+/**
+ * Sends the current and chosen temperature to the uart module to be transmitted
+ */
+void send_temperature_message() {
+    // Create a default string with empty spaces for the temperature values
+    char temperatureString[] = "(  ,  )\n\r";
+
+    // Convert the current temperature and put the 2 digits in the
+    // string starting at index 1
+    convert_to_char(tCurrent, temperatureString, 1);
+
+    // Convert the chosen temperature and put the 2 digits in the
+    // string starting at index 4
+    convert_to_char(tChosen, temperatureString, 4);
+
+    // Send the string to the UART for transmission
+    uart_send_data(temperatureString);
 }
 
 /**
@@ -88,117 +166,118 @@ int random_0_1() {
 }
 
 /**
- * Converts a 2 digit unsigned 32 bit integer into a two character string
- *
- * parameters
- *
- *      data - an unsigned 32 bit integer to be converted to characters
- *
- *      characters - a string of characters into which the 2 converted digits will be placed
- *
- *      index - the starting index of where to place the 2 converted digits
- */
-void convert_to_char(uint32_t data, char * characters, int index) {
-
-    int digit_1 = data / 10;
-    int digit_2 = data - digit_1 * 10;
-
-    char character1 = '0' + digit_1;
-    char character2 = '0' + digit_2;
-
-    characters[index] = character1;
-    characters[index + 1] = character2;
-}
-
-/**
- * Sends the current and chosen temperature to the uart module to be transmitted
- */
-void send_temperature_message() {
-    char temperatureString[] = "(  ,  )\n\r";
-
-    convert_to_char(tCurrent, temperatureString, 1);
-
-    if (tChosen != STOP_VALUE) {
-        convert_to_char(tChosen, temperatureString, 4);
-    } else {
-        temperatureString[4] = 'F';
-        temperatureString[5] = 'F';
-    }
-
-    uart_send_data(temperatureString);
-}
-
-/**
- * increments or decrements the current temperature depending on the current mode
+ * increments or decrements the current temperature depending on the current period
  */
 void increment_decrement_temperature() {
 
-
-    if (currentModePtr->character == 'C') {
-        // Decrement the temperature if in cooling mode
+    if (currentPeriodPtr->character == 'C') {
+        // Decrement the temperature if in cooling period
         tCurrent -= random_0_1();
-    } else if (currentModePtr->character == 'H') {
-        // Increment the temperature if in heating mode
+    } else if (currentPeriodPtr->character == 'H') {
+        // Increment the temperature if in heating period
         tCurrent += random_0_1();
     }
+}
+
+/**
+ * Function for handling the off period functionality
+ */
+void handleOnSubPeriod(){
+    // disable the interrupt during the on period
+    uart_set_interrupt(SET_INTERRUPT_DISABLED);
+
+    // Check if current temperature has reached the desired temperature,
+    // or if the stop value has been entered
+    if (tCurrent != tChosen && stopFlag != 1) {
+
+        // Create a string to send to the uart for transmission
+        char character_to_send[] = " \0";
+
+        // Set the first character in the string to the character for the period
+        // the program is currently in
+        character_to_send[0] = currentPeriodPtr->character;
+
+        uart_send_data(character_to_send);
+
+        // turn on the LED for the current period
+        led_turn_on(currentPeriodPtr->led_id);
+
+        // update temperature
+        increment_decrement_temperature();
+
+        // Enable the timer interrupt with the appropriate delay
+        timer_enable_interrupt(currentPeriodPtr->delays[currentSubPeriod]);
+    } else {
+        // If current temperature has reached the chosen temperature
+        // or the user has chosen to stop the process
+
+        // clear the stop flag
+        stopFlag = 0;
+
+        // set current mode to sleep
+        currentMode = SLEEP;
+
+        // set current sub period to off
+        currentSubPeriod = OFF;
+
+        // re-enable the uart interrupt
+        uart_set_interrupt(SET_INTERRUPT_ENABLED);
+
+        // disable and clear the timer interrupts
+        timer_disable_and_clear_interrupt();
+    }
+}
+
+/**
+ * Function for handling the on sub period functionality
+ */
+void handleOffSubPeriod() {
+    // enable to uart interrupt
+    uart_set_interrupt(SET_INTERRUPT_ENABLED);
+
+    // turn off the led for the current period
+    led_turn_off(currentPeriodPtr->led_id);
+
+    // send the temperature message to the user
+    send_temperature_message();
+
+    // enabled the interrupt with the appropriate delay
+    timer_enable_interrupt(currentPeriodPtr->delays[currentSubPeriod]);
 }
 
 /**
  * The callback function to be called by the timer interrupt function
  */
 void timer_callback() {
-
-    if (currentModePtr->currentSubPeriod == OFF) {
-
-        uart_set_interrupt(SET_INTERRUPT_ENABLED);
-
-        if (tCurrent != tChosen && tChosen != STOP_VALUE) {
-            currentModePtr->currentSubPeriod = ON;
-
-            char character_to_send[] = " \0";
-
-            character_to_send[0] = currentModePtr->character;
-
-            uart_send_data(character_to_send);
-
-            led_turn_on(currentModePtr->led_id);
-
-            increment_decrement_temperature();
-
-            timer_enable_interrupt(currentModePtr->delays[currentModePtr->currentSubPeriod]);
+    if (currentMode == ACTIVE) {
+        if (currentSubPeriod == OFF) {
+            // Switch the sub period the program is in
+            currentSubPeriod = ON;
+            handleOnSubPeriod();
         } else {
-            tChosen = tCurrent;
-            timer_disable_and_clear_interrupt();
+            // Switch the sub period the program is in
+            currentSubPeriod = OFF;
+            handleOffSubPeriod();
         }
-
-    } else {
-
-        uart_set_interrupt(SET_INTERRUPT_DISABLED);
-
-        currentModePtr->currentSubPeriod = OFF;
-
-        led_turn_off(currentModePtr->led_id);
-
-        send_temperature_message();
-
-        timer_enable_interrupt(currentModePtr->delays[currentModePtr->currentSubPeriod]);
     }
-
 }
 
+/**
+ * Main function for the program
+ */
 int main(void)
 {
-    heatingMode.led_id = 6;
-    heatingMode.character = 'H';
-    heatingMode.delays[0] = 400;
-    heatingMode.delays[1] = 600;
-    heatingMode.currentSubPeriod = OFF;
+    // Set the values for the heating period
+    heatingPeriod.led_id = 6;      // Red LED
+    heatingPeriod.character = 'H';
+    heatingPeriod.delays[0] = 400; // OFF delay
+    heatingPeriod.delays[1] = 600; // ON delay
 
-    coolingMode.led_id = 7;
-    coolingMode.character = 'C';
-    coolingMode.delays[0] = 500;
-    coolingMode.delays[1] = 500;
-    coolingMode.currentSubPeriod = OFF;
+    // Set the values for the cooling period
+    coolingPeriod.led_id = 7;      // Green LED
+    coolingPeriod.character = 'C';
+    coolingPeriod.delays[0] = 500; // OFF delay
+    coolingPeriod.delays[1] = 500; // ON delay
 
     led_setup();
     uart_setup(&uart_callback, 115200, UART_FIFO_TX1_8, UART_FIFO_RX1_8);

@@ -1,9 +1,11 @@
 /**
- * CMPT464 Lab 4 Exercise 1
+ * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
  *
  * uart_module.h
+ *
+ * This is the header file for the UART module
  */
 
 #ifndef UART_MODULE_H_
