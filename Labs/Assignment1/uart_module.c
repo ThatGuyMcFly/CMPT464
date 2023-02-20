@@ -1,7 +1,8 @@
 /**
- * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
+ * CMPT464 Assignment 1
+ * Due: February 22nd, 2023
  *
  * uart_module.c
  *
@@ -98,7 +99,7 @@ void uart_set_interrupt(SET_INTERRUPT setInterrupt){
  *
  * Parameters
  *
- *      passedInCallback - the function to be called in the interrupt handler. This function needs to take a char pointer as a parameter
+ *      passedInCallback - the function to be called in the interrupt handler. This function returns nothing and takes a char pointer as a parameter
  *
  *      baudRate - an unsigned 32 bit integer to set the baud rate
  *

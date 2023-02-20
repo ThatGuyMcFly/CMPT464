@@ -1,13 +1,15 @@
 /**
- * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
+ * CMPT464 Assignment 1
+ * Due: February 22nd, 2023
  *
  * main.c
  *
  * This Program simulates an air conditioning control system. The user enters a desired
  * temperature between 20 and 30 degrees, and the system triggers either a heating or
- * cooling period to reach the desired temperature. The program will output a character
+ * cooling period to reach the desired temperature. If the user enters "FF  " then the program
+ * will go back into sleep mode at the end of a full period. The program will output a character
  * representing the period it is in as well as lighting an LED on the board to represent
  * the current period.
  *
@@ -24,16 +26,18 @@
 #include "uart_module.h"
 #include "timer_module.h"
 
+// Macro for defining the string to expect from the user to stop the system
 #define STOP_STRING "FF  "
 
+// Integers for keeping track of the current and chosen temperatures
 int tCurrent = 0;
 int tChosen = 0;
 
-int stopFlag = 0;
+int stopFlag = 0; // flag for keeping track of whether or not the user has chosen to stop the system
 
-typedef enum {OFF, ON} subPeriod;
+typedef enum {OFF, ON} subPeriod; // enum for keeping track of the subperiod
 
-typedef enum {SLEEP, ACTIVE} mode;
+typedef enum {SLEEP, ACTIVE} mode; // enum for keeping track of the mode
 
 // struct for handling the 2 periods of the program
 typedef struct {

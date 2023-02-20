@@ -1,7 +1,8 @@
 /**
- * CMPT464 Assignment 1
  * Martin Knoetze
  * SN: 3086754
+ * CMPT464 Assignment 1
+ * Due: February 22nd, 2023
  *
  * timer_module.c
  *
